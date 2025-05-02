@@ -11,12 +11,6 @@ public class GoogleHomePage {
     private String searchBox = "//*[@title='Search']";
     private String searchButton = "(//input[@value='Google Search'])[1]";
     private String calculatorSearch = "//h2[text()='Calculator Result']";
-    private String buttonType = "//div[@role='button']";
-    private String answer = "//div[@role='presentation' and @tabindex='0']/../preceding-sibling::div/div/span";
-    private String currentResult = " //div[@role='presentation' and @tabindex='0']/div/span";
-    private String clearEntry = "//div[text()='CE']";
-    private String allClear = "//div[text()='AC']";
-
 
     //Initialize page using constructor
     public GoogleHomePage(Page page) {

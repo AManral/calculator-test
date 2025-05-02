@@ -1,10 +1,10 @@
-# Google Calculator Automation with PLaywright & Java
+# Google Calculator Automation with Playwright & Java
 
 This project automates calculator UI functionality using Playwright and generates detailed test report using Allure.
 
 ## Technologies Used
 
-- Java 11+
+- Java 11+ [Preferably Java 17]
 - [Playwright for Java](https://playwright.dev/java/)
 - TestNG
 - Allure Framework (for reporting)
@@ -12,8 +12,9 @@ This project automates calculator UI functionality using Playwright and generate
 
 ## Setup Instructions
 
-- Install JDK 11+
-- Clone Repo 
+- Install JDK 17
+- Install Maven ```brew install maven```
+- Clone Repo - https://github.com/AManral/calculator-test.git
 - Install allure: ```brew install allure```
 
 ## Run Tests using Maven
