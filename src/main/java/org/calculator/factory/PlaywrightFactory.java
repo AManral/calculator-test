@@ -29,8 +29,11 @@ public class PlaywrightFactory {
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         browserContext = browser.newContext(new Browser.NewContextOptions().setViewportSize((int)screenSize.getWidth(),(int)screenSize.getHeight()));
+        browserContext.addInitScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined});");
+
         page = browserContext.newPage();
-        page.navigate("https://www.google.com");
+//        page.navigate("https://www.google.com");
+        page.navigate("https://ww3.gcpay.com/.");
 //        // Accept cookies if prompted (may vary by region)
 //        try {
 //            page.locator("button:has-text('Accept all')").click();

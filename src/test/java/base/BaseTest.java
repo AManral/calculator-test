@@ -7,6 +7,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import pages.CalculatorPage;
+import pages.GCPage;
 import pages.GoogleHomePage;
 
 import java.util.logging.Logger;
@@ -18,22 +19,26 @@ public class BaseTest implements ITestListener {
     static  Page page;
     protected GoogleHomePage googleHomePage;
     protected CalculatorPage calculatorPage;
+    protected GCPage gcPage;
     static Logger log = Logger.getLogger(BaseTest.class.getName());
 
 
     @BeforeTest
     public void setup() throws InterruptedException {
         pf  = new PlaywrightFactory();
-        page = pf.initBrowser("firefox");
+        page = pf.initBrowser("chrome");
+
+
         googleHomePage = new GoogleHomePage(page);
         calculatorPage = new CalculatorPage(page);
+          gcPage = new GCPage(page);
 
 
-        try {
-            googleHomePage.searchTerm("calculator");
-        }catch (Exception e){
-            log.severe("Error while opening google calculator");
-        }
+//        try {
+//            googleHomePage.searchTerm("calculator");
+//        }catch (Exception e){
+//            log.severe("Error while opening google calculator");
+//        }
     }
 
     @AfterTest
